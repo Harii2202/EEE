@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noteboard Message</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            background-image: radial-gradient(circle, #ffffff, #f0f0f0);
+        }
+        .noteboard-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f7e8d5;
+            border: 1px solid #d2b48c;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 900px;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .noteboard-container::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            width: 50px;
+            height: 15px;
+            background-color: #d2b48c;
+            border-radius: 5px;
+        }
+        .noteboard {
+            position: relative;
+            width: 100%;
+            padding: 30px;
+            background-color: #fff8dc;
+            border-radius: 8px;
+            border: 1px dashed #d2b48c;
+            text-align: left;
+            min-height: 400px; /* Increased height for a longer box */
+        }
+        .noteboard h1 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .noteboard p {
+            font-size: 20px;
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .date {
+            font-size: 16px;
+            color: #777;
+            margin-top: 15px;
+        }
+        .paperclip {
+            position: absolute;
+            top: -15px;
+            left: 10px;
+            width: 40px;
+            height: 40px;
+            transform: rotate(-30deg);
+        }
+    </style>
+</head>
+<body>
+
+<div class="noteboard-container">
+    <img src="https://cdn-icons-png.flaticon.com/512/2920/2920054.png" alt="paperclip" class="paperclip">
+    <div class="noteboard">
+        <h1>Noteboard Message</h1>
+        <p>This is a noteboard-styled message area where you can display important information. You can easily customize this text, add more details, or change the style to fit your needs.</p>
+        <p class="date">Date: <script>document.write(new Date().toLocaleDateString());</script></p>
+    </div>
+</div>
+
+</body>
+</html>
